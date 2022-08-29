@@ -1,13 +1,15 @@
 import { useState } from "react";
 import "./App.css";
+import DemoOutput from "./components/DemoOutput";
 import Button from "./components/UI/Button/Button";
 
 function App() {
   const [showPara, setShowPara] = useState(false);
+  console.log("App Running");
   return (
     <div className="App">
       <h1>Hello There !! </h1>
-      {showPara && <p>This is new p tag</p>}
+      <DemoOutput show={showPara} />
       <Button onClick={() => setShowPara((prevState) => !prevState)}>
         Show Paragraph
       </Button>
